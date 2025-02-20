@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test App</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="full-w no-mp">
+    <header class="flex-row js-between pad-5 b-box">
+        <span class="site-title c-pointer no-select">Typing Tester</span>
+        <span class="menu-btn flex-col gap-5 jc-center al-end c-pointer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </header>
+    <main class="flex-col full-hw ja-center">
+        <div class="score-bar flex-row js-between full-w pad-10 b-box" style="padding: 0px max(10%, min(200px, 10%));">
+            <div class="time flex-row">
+                <h2 id="time">60</h2>
+                <p>s</p>
+            </div>
+            <div class="score flex-row gap-10">
+                <div class="wpm flex-row">
+                    <h2 id="wpm">00</h2>
+                    <p>WPM</p>
+                </div>
+                <div class="accuracy flex-row">
+                    <h2 id="accuracy">100</h2>
+                    <p>%</p>
+                </div>
+            </div>
+        </div>
+        <div class="typing-placeholder no-select b-box full-w" title="Click to focus, and Start Typing.">
+        </div>
+        <div class="controls flex-row ja-center gap-10 full-w">
+            <button class="btn">
+                <span class="icon flex-row h-opact sq30 i-next"></span>
+            </button>
+            <button class="btn">
+                <span class="icon flex-row h-opact sq30 bgs-80 i-restart"></span>
+            </button>
+            <button class="btn">
+                <span class="icon flex-row h-opact sq30 bgs-60 i-custom"></span>
+            </button>
+        </div>
+    </main>
+    <footer class="flex-row ja-center pad-5 b-box">
+        <!-- copyright 2025 @susanta.rf.gd -->
+    </footer>
+    <script src="./js/var.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/typer.js"></script>
+</body>
+
+</html>

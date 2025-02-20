@@ -1,0 +1,15 @@
+.i-next {
+    background-image: url("../assets/icons/right-arrow-svgrepo-com.svg");
+}
+
+.i-settings {
+    background-image: url("../assets/icons/next-svgrepo-com.svg");
+}
+
+.i-restart {
+    background-image: url("../assets/icons/restart-svgrepo-com.svg");
+}
+
+.i-custom {
+    background-image: url("../assets/icons/custom-apps-svgrepo-com.svg");
+}

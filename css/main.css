@@ -1,0 +1,146 @@
+.flex-row,
+.flex-col {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.ja-center {
+    justify-content: center;
+}
+
+.al-center,
+.js-between,
+.ja-center {
+    align-items: center;
+}
+
+.al-end {
+    align-items: end;
+}
+
+.js-start {
+    justify-content: start;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.js-between {
+    justify-content: space-between;
+}
+
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.no-bg {
+    background-color: transparent;
+}
+
+.no-bd {
+    border: 0px;
+}
+
+.pad-5 {
+    padding: 5px;
+}
+
+.pad-10 {
+    padding: 10px;
+}
+
+.no-mp {
+    margin: 0;
+    padding: 0;
+}
+
+.full-hw {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.full-h {
+    height: 100%;
+}
+
+.full-w {
+    width: 100%;
+}
+
+.b-box {
+    box-sizing: border-box;
+}
+
+.icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sq30 {
+    height: 30px;
+    width: 30px;
+}
+
+.h-opact {
+    opacity: 0.5;
+}
+
+.bgs-80 {
+    background-size: 80%;
+}
+
+.bgs-60 {
+    background-size: 60%;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.c-white {
+    color: white;
+}
+
+.c-green {
+    color: lightgreen;
+}
+
+.c-ored {
+    color: orangered;
+}
+
+.bg-gray {
+    background-color: #ffffff30
+}
+
+.bg-green {
+    background-color: green;
+}
