@@ -9,11 +9,12 @@ const testText = {
 }
 
 const article = "";
-let gameMode = 4; // 0 = easy, 1 = medium, 2 = hard, 3 = special, 4 = coding
+let gameMode = 3; // 0 = easy, 1 = medium, 2 = hard, 3 = special, 4 = coding
 
 let textIndex = 0;
 let currentWord = "";
 let canType = false;
 let isTyping = false;
+let backPressed = false;
 
 let time = 30; // Example time in seconds

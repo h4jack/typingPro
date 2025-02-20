@@ -13,7 +13,7 @@ function shuffleWord(word) {
 
 function calculateWPMAndAccuracy(testWords, realWords, timeInSeconds) {
     // Calculate words per minute (WPM) based on the user text
-    const userTypedWords = testWords.length;
+    const userTypedWords = testWords.filter(word => word !== "").length;
     const wordsPerMinute = (userTypedWords / (timeInSeconds || 1)) * 60;
 
     // Calculate accuracy based on how many words the user typed correctly

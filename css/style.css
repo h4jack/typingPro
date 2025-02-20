@@ -96,13 +96,44 @@ main {
 
 .typing-placeholder {
     padding: 40px max(20px, 10%);
+    margin: 40px 0;
     text-align: justify;
     font-size: 30px;
     cursor: text;
     overflow: scroll;
     scrollbar-width: none;
     color: #ffffff50;
-    /* Make text color transparent to show the gradient */
+}
+
+.typing-placeholder>span {
+    display: inline-flex;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+
+.typing-placeholder #input-pointer {
+    background-color: white;
+    width: 3px;
+    animation: cursor-animation 2s infinite forwards;
+}
+
+@keyframes cursor-animation {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 h2 {

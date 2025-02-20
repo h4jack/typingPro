@@ -1,3 +1,7 @@
+function getInputPointer() {
+    return document.getElementById(`input-pointer`);
+}
+
 function getCurrentWord() {
     return document.getElementById(`txtIndex-${textIndex}`);
 }
@@ -41,7 +45,7 @@ function scrollToCurrentWord(element) {
     // Scroll vertically to align the element to the parent's top
     parent.scrollTo({
         top: element.offsetTop - parent.offsetTop, // Align top
-        left: parent.offsetLeft + element.offsetWidth - parent.offsetWidth, // Align right
+        left: element.offsetLeft - parent.offsetLeft, // Align right
     });
 }
 
@@ -79,6 +83,7 @@ function setStatUI(time, wpm, accuracy) {
 
 // Names export for UI features.
 export {
+    getInputPointer,
     getCurrentWord,
     setCurrentWord,
     getCurrentWordReal,

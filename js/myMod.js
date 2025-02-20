@@ -42,16 +42,15 @@ export function startTyping() {
     let timerInterval = setInterval(() => {
         if (timeInSeconds <= 0 || !isTyping) {
             clearInterval(timerInterval); // Stop the timer when time is 0
+            canType = false;
         } else {
-            const result = myModule.calculateWPMAndAccuracy(testText.userText, testText.realText, time - timeInSeconds);
-
-            myUI.setStatUI(
-                timeInSeconds,
-                result.wpm.toFixed(0),
-                result.accuracy.toFixed(2)
-            )
-
             timeInSeconds--; // Decrement time by 1 second
         }
+        const result = myModule.calculateWPMAndAccuracy(testText.userText, testText.realText, time - timeInSeconds);
+        myUI.setStatUI(
+            timeInSeconds,
+            result.wpm.toFixed(0),
+            result.accuracy.toFixed(2)
+        )
     }, 1000);
 }

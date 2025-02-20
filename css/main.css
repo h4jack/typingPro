@@ -144,3 +144,11 @@
 .bg-green {
     background-color: green;
 }
+
+.txt-0{
+    color: #00000000;
+}
+
+.no-w{
+    width: 0;
+}
