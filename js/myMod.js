@@ -41,9 +41,11 @@ export function startTyping() {
     let timeInSeconds = time * 1000; // Convert time to milliseconds
 
     let timerInterval = setInterval(() => {
-        if (Date.now() - startTime >= timeInSeconds) {
+        if (!isTyping || Date.now() - startTime >= timeInSeconds) {
+            if (isTyping) {
+                canType = false;
+            }
             clearInterval(timerInterval); // Stop the timer when time is up or typing stops
-            canType = false;
         }
         // Update the UI with the remaining time in seconds
         const remainingTime = Math.ceil((timeInSeconds - (Date.now() - startTime)) / 1000);
