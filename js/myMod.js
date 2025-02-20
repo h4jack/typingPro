@@ -34,23 +34,28 @@ export function setTextToReal(customText = "") {
     }
     myUI.renderWords();
 }
-
 export function startTyping() {
     textIndex = 0;
     testText.userText = [];
-    let timeInSeconds = time; // Example time in seconds
+    let startTime = Date.now(); // Capture the exact start time in milliseconds
+    let timeInSeconds = time * 1000; // Convert time to milliseconds
+
     let timerInterval = setInterval(() => {
-        if (timeInSeconds <= 0 || !isTyping) {
-            clearInterval(timerInterval); // Stop the timer when time is 0
+        if (!isTyping || Date.now() - startTime >= timeInSeconds) {
+            clearInterval(timerInterval); // Stop the timer when time is up or typing stops
             canType = false;
         } else {
-            timeInSeconds--; // Decrement time by 1 second
+            // Update the UI with the remaining time in seconds
+            const remainingTime = Math.ceil((timeInSeconds - (Date.now() - startTime)) / 1000);
+            const elapsedTime = (Date.now() - startTime) / 1000; // Convert to seconds
+
+            // Calculate WPM and accuracy based on elapsed time
+            const result = myModule.calculateWPMAndAccuracy(testText.userText, testText.realText, elapsedTime);
+            myUI.setStatUI(
+                remainingTime,
+                result.wpm.toFixed(0),
+                result.accuracy.toFixed(2)
+            );
         }
-        const result = myModule.calculateWPMAndAccuracy(testText.userText, testText.realText, time - timeInSeconds);
-        myUI.setStatUI(
-            timeInSeconds,
-            result.wpm.toFixed(0),
-            result.accuracy.toFixed(2)
-        )
-    }, 1000);
+    }, 100);
 }

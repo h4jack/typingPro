@@ -35,6 +35,10 @@ document.querySelectorAll(".controls button")[2].addEventListener("click", (e) =
 
 document.addEventListener("keydown", (e) => {
     // Prevent default behavior for other keys (like space, letters, backspace, enter)
+    if (/^F[1-9]$|^F1[0-2]$/.test(e.key)) {
+        return;
+    }
+
     e.preventDefault();
 
     function isCtrl(key, callback = () => { }) {
