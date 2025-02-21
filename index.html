@@ -12,11 +12,7 @@
 <body class="full-w no-mp">
     <header class="flex-row js-between pad-5 b-box">
         <span class="site-title c-pointer no-select">Typing Tester</span>
-        <span class="menu-btn flex-col gap-5 jc-center al-end c-pointer">
-            <span></span>
-            <span></span>
-            <span></span>
-        </span>
+        <span class="icon sq30 i-settings c-pointer no-bd btn-settings"></span>
     </header>
     <main class="flex-col full-hw ja-center">
         <div class="score-bar flex-row js-between full-w pad-10 b-box" style="padding: 0px max(10%, min(200px, 10%));">
@@ -33,28 +29,38 @@
                     <h2 id="accuracy">100</h2>
                     <p>%</p>
                 </div>
+                <div class="cpm flex-row">
+                    <h2 id="cpm">00</h2>
+                    <p>CPM</p>
+                </div>
+                <div class="w-error flex-row">
+                    <h2 id="w-error">00</h2>
+                    <p>Error</p>
+                </div>
             </div>
         </div>
-        <div class="typing-placeholder no-select b-box full-w" title="Click to focus, and Start Typing.">
+        <div class="typing-placeholder b-box full-w" title="Click to focus, and Start Typing.">
         </div>
         <div class="controls flex-row ja-center gap-10 full-w">
-            <button class="btn">
+            <button class="btn my-optn-btn">
                 <span class="icon flex-row h-opact sq30 i-next"></span>
             </button>
-            <button class="btn">
+            <button class="btn my-optn-btn">
                 <span class="icon flex-row h-opact sq30 bgs-80 i-restart"></span>
             </button>
-            <button class="btn">
+            <button class="btn my-optn-btn">
                 <span class="icon flex-row h-opact sq30 bgs-60 i-custom"></span>
             </button>
         </div>
     </main>
-    <footer class="flex-row ja-center pad-5 b-box">
-        <!-- copyright 2025 @susanta.rf.gd -->
-    </footer>
+    <!-- <footer class="flex-row ja-center pad-5 b-box"> -->
+    <!-- copyright 2025 @susanta.rf.gd -->
+    <!-- </footer> -->
     <script src="./js/var.js"></script>
     <script type="module" src="./js/dom.js"></script>
     <script type="module" src="./js/typer.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>

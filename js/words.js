@@ -961,3 +961,7 @@ The process of self-discovery is often a long and arduous journey. It involves q
 As technology advances at an unprecedented rate, the relationship between humanity and the digital world becomes increasingly important. The internet, once a mere tool for communication, has transformed into a powerful force that shapes the way people interact, learn, and work. Social media, in particular, has had a profound impact on human behavior, altering how individuals present themselves to the world and how they connect with others.
 
 In this new era, the question of what it means to be human is more relevant than ever. As society grapples with the rapid pace of technological change, it is essential to reflect on the values and principles that define humanity. Will individuals retain their sense of empathy and compassion, or will the digital age lead to a more isolated and fragmented society? Only time will tell.`;
+
+export {
+    article
+}

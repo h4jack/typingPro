@@ -50,15 +50,26 @@ function scrollToCurrentWord(element) {
 }
 
 function renderWords() {
-    typingPlace.innerHTML = "";
+    typingPlace.innerHTML = "";  // Clear the content of typingPlace
+    canType = false;
+
+    // Create a DocumentFragment for better performance
+    const fragment = document.createDocumentFragment();
+
     testText.realText.forEach((text, index) => {
         const newWord = document.createElement("span");
         newWord.id = `txtIndex-${index}`;
         newWord.innerText = text;
-        typingPlace.append(newWord);
-        typingPlace.innerHTML += "\n";
+        fragment.appendChild(newWord);  // Append each word to the fragment
+        fragment.appendChild(document.createTextNode(" "));  // Add space between words
     });
+
+    // Append the fragment to typingPlace in one operation
+    typingPlace.appendChild(fragment);
+
+    canType = true;
 }
+
 
 function tabPressed() {
     const buttons = document.querySelectorAll(".controls button"); // Get all buttons inside .controls
@@ -75,10 +86,19 @@ function tabPressed() {
 }
 
 
-function setStatUI(time, wpm, accuracy) {
+function setStatUI(
+    time = "00",
+    wpm = "00",
+    accuracy = "00",
+    cpm = "00",
+    error = "00"
+) {
     time_f.innerText = time;
     wpm_f.innerText = wpm;
     accuracy_f.innerText = accuracy;
+    cpm_f.innerText = cpm;
+    error_f.innerText = error;
+
 }
 
 // Names export for UI features.

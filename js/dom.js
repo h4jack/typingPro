@@ -7,12 +7,32 @@ import {
 
 import * as typer from "./typer.js";
 
-window.onload = () => {
+window.onload = () => {    
     typer.newStart();
 }
 
-document.querySelector(".menu-btn").addEventListener("click", (e) => {
-    e.currentTarget.classList.toggle("active");
+window.addEventListener('load', () => {
+    // Get the performance entry for navigation
+    const [navigationEntry] = performance.getEntriesByType('navigation');
+    
+    if (navigationEntry) {
+        const pageLoadTime = navigationEntry.loadEventEnd - navigationEntry.navigationStart;
+        
+        // Check if the result is positive
+        if (pageLoadTime >= 0) {
+            console.log(`Total page load time: ${pageLoadTime} milliseconds`);
+        } else {
+            console.log("The calculated load time is invalid or negative.");
+        }
+    } else {
+        console.log("Navigation timing data is not available.");
+    }
+});
+
+
+
+document.querySelector(".btn-settings").addEventListener("click", (e) => {
+    console.log("hello world");
     typer.openMenu();
 })
 
@@ -29,7 +49,6 @@ document.querySelectorAll(".controls button")[1].addEventListener("click", (e) =
     document.activeElement.blur();
 })
 document.querySelectorAll(".controls button")[2].addEventListener("click", (e) => {
-    startTyping();
     document.activeElement.blur();
 })
 
@@ -49,14 +68,9 @@ document.addEventListener("keydown", (e) => {
         return false;
     }
 
-    if (isCtrl("Backspace")) {
-        if (currentWord) {
-            currentWord = "";
-            typer.matchWord();
-            return;
-        }
-    } else if (e.shiftKey && isCtrl("c")) {
-        currentWord = "";
+    if (isCtrl("x") || isCtrl("c")) {
+        if (isCtrl("x")) currentWord = "";
+        window.navigator.clipboard.writeText(currentWord);
         typer.matchWord();
     } else if (isCtrl("m")) {
         typer.openMenu();
@@ -82,6 +96,14 @@ document.addEventListener("keydown", (e) => {
 
     if (!canType) {
         return;
+    }
+
+    if (isCtrl("Backspace")) {
+        if (currentWord) {
+            currentWord = "";
+            typer.matchWord();
+            return;
+        }
     }
 
     if (e.key.length == 1 && e.key != " " && !e.ctrlKey) {

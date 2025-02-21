@@ -18,16 +18,24 @@ function calculateWPMAndAccuracy(testWords, realWords, timeInSeconds) {
 
     // Calculate accuracy based on how many words the user typed correctly
     let correctWords = 0;
+    let cpm = 0;
+    let errorWords = 0;
     for (let i = 0; i < testWords.length; i++) {
         if (testWords[i] === realWords[i]) {
             correctWords++;
+        } else {
+            errorWords++;
         }
+
+        cpm += testWords[i].length;
     }
     const accuracy = (correctWords / (userTypedWords || 1)) * 100;
 
     return {
         wpm: wordsPerMinute,
-        accuracy: accuracy
+        accuracy: accuracy,
+        cpm: cpm,
+        error: errorWords
     };
 }
 

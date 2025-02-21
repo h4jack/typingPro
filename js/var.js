@@ -2,6 +2,8 @@ const typingPlace = document.querySelector(".typing-placeholder");
 const time_f = document.getElementById("time")
 const wpm_f = document.getElementById("wpm")
 const accuracy_f = document.getElementById("accuracy")
+const cpm_f = document.getElementById("cpm")
+const error_f = document.getElementById("w-error")
 
 const testText = {
     realText: [],

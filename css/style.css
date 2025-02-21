@@ -43,12 +43,15 @@ main {
     background-color: transparent;
     color: white;
     font-weight: bold;
-    padding: 5px 25px;
     border: 2px solid rgba(47, 79, 79, 0.222);
     border-radius: 5px;
-    font-size: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.my-optn-btn {
+    padding: 5px 25px;
+    font-size: 15px;
 }
 
 .btn:hover {
@@ -60,38 +63,6 @@ main {
     outline: 2px solid lightcyan;
     box-shadow: 0px 0px 5px lightcyan;
     /* font-size: 18px; */
-}
-
-
-.menu-btn {
-    position: relative;
-    height: 100%;
-    width: 40px;
-    background-color: transparent;
-    border: none;
-    filter: drop-shadow(2px 2px 0px lightcyan);
-}
-
-.menu-btn span {
-    height: 4px;
-    width: 30px;
-    background-color: darkcyan;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.menu-btn.active:hover>span:first-child {
-    width: 30px;
-}
-
-.menu-btn.active span {
-    width: 30px;
-    rotate: 135deg;
-    position: absolute;
-}
-
-.menu-btn.active span:last-child {
-    rotate: 45deg;
 }
 
 .typing-placeholder {
@@ -138,4 +109,24 @@ main {
 
 h2 {
     margin-bottom: 0;
+}
+
+.btn-settings {
+    filter: grayscale(100);
+    opacity: 0.5;
+}
+
+.btn-settings:hover {
+    filter: none;
+    opacity: 1;
+}
+
+.btn-settings:focus-within {
+    box-shadow: 0px 0px 5px lightcyan;
+    outline: 2px solid lightcyan;
+    border: 1px solid #ffffff80;
+    border-radius: 5px;
+    padding: 5px;
+    background-size: 80%;
+    background-color: red;
 }

@@ -2,6 +2,7 @@
 import * as myModule from "./../module/main.js";
 import * as myUI from "./../module/ui.js";
 import { setTextToReal, startTyping } from "./myMod.js";
+import { article } from "./words.js";
 
 function nextWord() {
     myUI.removeWordClass(myUI.getCurrentWord());
@@ -73,7 +74,7 @@ function resetData() {
     isTyping = false;
     canType = true;
     textIndex = 0;
-    myUI.setStatUI(time, "00", "100")
+    myUI.setStatUI(time)
     matchWord()
 }
 

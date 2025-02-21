@@ -55,7 +55,9 @@ export function startTyping() {
         myUI.setStatUI(
             remainingTime,
             result.wpm.toFixed(0),
-            result.accuracy.toFixed(2)
+            result.accuracy.toFixed(2),
+            result.cpm,
+            result.error
         );
     }, 500);
 }
