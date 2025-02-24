@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test App</title>
+    <title>typerPro</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="full-w no-mp">
+    <div class="popup-box flex-col ja-center full-hw">
+        <div class="custom-input-box flex-col ja-center">
+            <h2>CUSTOM WORD</h2>
+            <input type="text" class="custom-link-input custom-input full-w b-box"
+                placeholder="Enter a link to fetch all words from it.">
+            <div class="custom-hr full-w flex-col ja-center">OR</div>
+            <textarea class="custom-word-input custom-input no-bg no-bd full-w b-box" placeholder="1. Enter your custom words or article to test typing on it.
+2. Click outside to close the popup and save the custom word.
+3. Or copy and paste your words or article."></textarea>
+        </div>
+    </div>
     <header class="flex-row js-between pad-5 b-box">
-        <span class="site-title c-pointer no-select">Typing Tester</span>
+        <span class="site-title c-pointer no-select">typerPro</span>
         <span class="icon sq30 i-settings c-pointer no-bd btn-settings"></span>
     </header>
     <main class="flex-col full-hw ja-center">
@@ -56,6 +67,9 @@
     <!-- <footer class="flex-row ja-center pad-5 b-box"> -->
     <!-- copyright 2025 @susanta.rf.gd -->
     <!-- </footer> -->
+    <style>
+
+    </style>
     <script src="./js/var.js"></script>
     <script type="module" src="./js/dom.js"></script>
     <script type="module" src="./js/typer.js"></script>

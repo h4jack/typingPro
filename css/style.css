@@ -2,7 +2,7 @@
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    transition: all 0.3s ease;
 }
 
 body {
@@ -67,12 +67,12 @@ main {
 
 .typing-placeholder {
     padding: 40px max(20px, 10%);
-    margin: 40px 0;
+    margin: 40px max(20px, 10%);
+    height: 150px;
     text-align: justify;
     font-size: 30px;
     cursor: text;
-    overflow: scroll;
-    scrollbar-width: none;
+    overflow: hidden;
     color: #ffffff50;
 }
 
@@ -80,6 +80,7 @@ main {
     display: inline-flex;
     transition: all 0.3s ease;
     padding: 0;
+    animation: anim-opacity 0.3s ease;
 }
 
 
@@ -107,6 +108,16 @@ main {
     }
 }
 
+@keyframes anim-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 h2 {
     margin-bottom: 0;
 }
@@ -129,4 +140,71 @@ h2 {
     padding: 5px;
     background-size: 80%;
     background-color: red;
+}
+
+.popup-box {
+    box-sizing: border-box;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    padding: 10px;
+    display: none;
+    animation: anim-opacity 0.3s ease;
+}
+
+.custom-input-box {
+    box-sizing: border-box;
+    height: auto;
+    width: min(600px, 100%);
+    background-color: #00000030;
+    padding: 20px;
+    border: 2px solid #d3d3d330;
+    border-radius: 10px;
+}
+
+input.custom-input {
+    height: auto;
+}
+
+.custom-input {
+    height: 200px;
+    margin: 10px;
+    resize: none;
+    background-color: #33333330;
+    border: 2px solid #d3d3d330;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #d3d3d3;
+}
+
+.custom-input:focus-within {
+    outline: 2px groove rgb(173, 216, 230);
+}
+
+.custom-hr {
+    height: 3px;
+    margin: 10px;
+    background-color: #d3d3d330;
+}
+
+.key-popup {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    background-color: rgba(22, 141, 141, 0.552);
+    border-radius: 5px;
+}
+
+@keyframes opacity-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }

@@ -34,6 +34,7 @@ export function setTextToReal(customText = "") {
     }
     myUI.renderWords();
 }
+
 export function startTyping() {
     textIndex = 0;
     testText.userText = [];

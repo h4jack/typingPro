@@ -2,7 +2,6 @@
 import * as myModule from "./../module/main.js";
 import * as myUI from "./../module/ui.js";
 import { setTextToReal, startTyping } from "./myMod.js";
-import { article } from "./words.js";
 
 function nextWord() {
     myUI.removeWordClass(myUI.getCurrentWord());
@@ -14,6 +13,10 @@ function nextWord() {
         myUI.addORed(myUI.getCurrentWord());
     }
     textIndex++; // go to next text
+    if (testText.realText.length === testText.userText.length && textIndex === testText.realText.length) {
+        showResult();
+        return;
+    }
     myUI.getCurrentWord().classList.add("bg-gray");
     currentWord = myUI.getCurrentWordUser();
 }
@@ -67,7 +70,6 @@ function matchWord() {
     myUI.scrollToCurrentWord(myUI.getInputPointer());
 }
 
-
 function resetData() {
     currentWord = ""
     testText.userText = [];
@@ -79,7 +81,7 @@ function resetData() {
 }
 
 function newStart() {
-    setTextToReal();
+    setTextToReal(article);
     resetData();
 }
 
@@ -93,7 +95,8 @@ function printResult() {
 }
 
 function showResult() {
-
+    canType = false;
+    isTyping = false;
 }
 
 function openMenu() {

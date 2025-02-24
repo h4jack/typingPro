@@ -30,6 +30,7 @@ export default {
         "searching",
         "in",
         "excitement.",
+        "Susanta",
         "orange",
         "are",
         "prepared.",
@@ -40,6 +41,7 @@ export default {
         "covered",
         "laughing",
         "peaceful",
+        "Mandi",
         "In",
         "sky,",
         "joy.",
@@ -182,6 +184,7 @@ export default {
         "sense",
         "work,",
         "to",
+        "Susanta",
         "shine",
         "unique",
         "bench",
@@ -193,6 +196,7 @@ export default {
         "plays",
         "in",
         "pavement",
+        "Mandi",
         "are",
         "night",
         "entire",
@@ -396,6 +400,7 @@ export default {
         "rapid",
         "drives",
         "the",
+        "Susanta",
         "digital",
         "learn,",
         "affecting",
@@ -408,6 +413,7 @@ export default {
         "others.",
         "tell.",
         "are",
+        "Mandi",
         "process",
         "humanity",
         "factors.",
@@ -669,6 +675,7 @@ export default {
         "update@info123",
         "open!world99",
         "alpha$beta123",
+        "$us4nt4",
         "check-secure23",
         "safe_run!python",
         "java$cript2022",
@@ -682,6 +689,7 @@ export default {
         "secure*data!",
         "password@123",
         "openAI-2023",
+        "M4nd1",
         "run_c0de!test",
         "hello#test123",
         "safe_code@_22",
@@ -763,11 +771,13 @@ export default {
         "x:",
         "$variable",
         "include",
+        "Susanta",
         "PHP",
         "defer",
         "let",
         "5);",
         "with",
+        "Eliot",
         "vector<int>",
         "go",
         "Go",
@@ -780,6 +790,7 @@ export default {
         "(let",
         "\"value\";",
         "y",
+        "Mandi",
         "n;",
         "foreach",
         "Error(\"message\");",
@@ -945,23 +956,4 @@ export default {
         "struct",
         "NAME"
     ]
-}
-
-
-let article = `Hard Passage:
-
-The intricacies of human nature have fascinated philosophers, scientists, and artists for centuries. The human mind, with its vast capacity for emotion, intellect, and creativity, remains one of the most complex subjects of study. What drives individuals to act in ways that defy logic or reason? Why do people often choose paths that lead to their own detriment, despite knowing the potential consequences?
-
-At the core of human behavior lies an intricate web of psychological and social factors. From childhood, individuals are shaped by their experiences, the environment in which they grow up, and the relationships they form with others. These early influences often determine the trajectory of a person's life, affecting their decisions, values, and perceptions of the world around them.
-
-However, as individuals mature, they begin to confront the complexities of adulthood. The demands of work, family, and society weigh heavily on their shoulders, forcing them to make difficult choices. In these moments, the ability to navigate the complexities of life becomes paramount. Some people are able to maintain a sense of balance, finding harmony between their personal desires and societal expectations, while others struggle to adapt to the ever-changing world around them.
-
-The process of self-discovery is often a long and arduous journey. It involves questioning deeply held beliefs, challenging preconceived notions, and reevaluating the meaning and purpose of life. Many individuals go through periods of doubt and uncertainty, but it is through these struggles that personal growth occurs. The willingness to embrace change and step out of one's comfort zone is often the key to unlocking new possibilities.
-
-As technology advances at an unprecedented rate, the relationship between humanity and the digital world becomes increasingly important. The internet, once a mere tool for communication, has transformed into a powerful force that shapes the way people interact, learn, and work. Social media, in particular, has had a profound impact on human behavior, altering how individuals present themselves to the world and how they connect with others.
-
-In this new era, the question of what it means to be human is more relevant than ever. As society grapples with the rapid pace of technological change, it is essential to reflect on the values and principles that define humanity. Will individuals retain their sense of empathy and compassion, or will the digital age lead to a more isolated and fragmented society? Only time will tell.`;
-
-export {
-    article
 }

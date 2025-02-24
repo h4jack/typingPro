@@ -1,43 +1,43 @@
 import {
     myUI,
-    myModule,
-    setTextToReal,
     startTyping
 } from "./typer.js";
 
 import * as typer from "./typer.js";
 
-window.onload = () => {    
+window.onload = () => {
     typer.newStart();
 }
 
-window.addEventListener('load', () => {
-    // Get the performance entry for navigation
-    const [navigationEntry] = performance.getEntriesByType('navigation');
-    
-    if (navigationEntry) {
-        const pageLoadTime = navigationEntry.loadEventEnd - navigationEntry.navigationStart;
-        
-        // Check if the result is positive
-        if (pageLoadTime >= 0) {
-            console.log(`Total page load time: ${pageLoadTime} milliseconds`);
-        } else {
-            console.log("The calculated load time is invalid or negative.");
-        }
-    } else {
-        console.log("Navigation timing data is not available.");
+popup_box.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (article) {
+        typer.newStart();
     }
+    popup_box.style.display = "none";
 });
+
+document.querySelector(".custom-input-box").addEventListener("click", (e) => {
+    e.stopPropagation();
+})
+document.querySelector(".custom-word-input").addEventListener("keydown", (e) => {
+    if (e.key == "Tab" || e.key == "Escape" || (e.ctrlKey && e.key == "Enter")) {
+        popup_box.click();
+    }
+})
+
+document.querySelector(".custom-word-input").addEventListener("input", (e) => {
+    article = e.target.value.trim();
+})
 
 
 
 document.querySelector(".btn-settings").addEventListener("click", (e) => {
-    console.log("hello world");
     typer.openMenu();
 })
 
 document.querySelector(".site-title").addEventListener("click", (e) => {
-    e.currentTarget.innerText = "Test Your Typing" == e.currentTarget.innerText ? "Typing Tester" : "Test Your Typing";
+    e.currentTarget.innerText = "Become Pro" == e.currentTarget.innerText ? "typerPro" : "Become Pro";
 })
 
 document.querySelectorAll(".controls button")[0].addEventListener("click", (e) => {
@@ -50,14 +50,36 @@ document.querySelectorAll(".controls button")[1].addEventListener("click", (e) =
 })
 document.querySelectorAll(".controls button")[2].addEventListener("click", (e) => {
     document.activeElement.blur();
+    popup_box.style.display = "flex";
+
+    const input = document.querySelector('.custom-word-input');
+    input.focus();
+    input.setSelectionRange(input.value.length, input.value.length);
+    input.scrollTop = input.scrollHeight;
 })
+
+function showKey(key) {
+    const popupkey = document.createElement("div");
+    popupkey.classList.add("key-popup");
+    popupkey.innerText = key;
+    document.body.appendChild(popupkey);
+    setTimeout(() => {
+        popupkey.style.animation = "opacity-out 0.3s ease";
+    }, 2000);
+    setTimeout(() => {
+        popupkey.class
+        popupkey.remove();
+    }, 2300);
+}
 
 document.addEventListener("keydown", (e) => {
     // Prevent default behavior for other keys (like space, letters, backspace, enter)
     if (/^F[1-9]$|^F1[0-2]$/.test(e.key)) {
         return;
     }
-
+    if (popup_box.style.display === "flex") {
+        return;
+    }
     e.preventDefault();
 
     function isCtrl(key, callback = () => { }) {
