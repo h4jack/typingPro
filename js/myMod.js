@@ -62,3 +62,29 @@ export function startTyping() {
         );
     }, 500);
 }
+
+
+export async function fetchAllText(url) {
+    try {
+        // Send a GET request to the URL
+        const response = await fetch(url, { mode: 'no-cors' });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Get the text content from the response
+        const html = await response.text();
+
+        // Create a new DOM parser
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        // Extract all text from the parsed HTML
+        const text = doc.body.innerText;
+
+        return text;
+    } catch (error) {
+        console.error(`An error occurred: ${error}`);
+        return null;
+    }
+}
