@@ -88,6 +88,16 @@ document.querySelectorAll(".level .drop-down span").forEach((span, index) => {
     })
 })
 
+document.querySelectorAll(".run-time .drop-down span").forEach((span, index) => {
+    span.addEventListener("click", (e) => {
+        if (Number(e.target.innerText) >= 30 && Number(e.target.innerText) <= 300) {
+            time = Number(e.target.innerText);
+            myUI.setStatUI(Number(e.target.innerText));
+            e.target.parentElement.parentElement.children[1].innerText = e.target.innerText;
+        }
+    })
+})
+
 document.querySelector('.custom-input-box').addEventListener("click", (e) => {
     e.stopPropagation();
 })

@@ -23,8 +23,6 @@
         <div class="loading-box flex-col ja-center">
             <div class="spinner"></div>
         </div>
-
-
         <div class="setting-menu b-box flex-col gap-5">
             <h2 class="text-center full-w">Settings</h2>
             <div class="menu flex-col">
@@ -32,11 +30,24 @@
                     <span>Level</span>
                     <span>Easy</span>
                     <div class="drop-down flex-col">
+                        <span>Common</span>
                         <span>Easy</span>
                         <span>Medium</span>
                         <span>Hard</span>
                         <span>Special</span>
                         <span>Coding</span>
+                    </div>
+                </div>
+                <div class="run-time dd-parent full-w flex-row js-between pad-10 b-box">
+                    <span>Time</span>
+                    <span>30</span>
+                    <div class="drop-down flex-col">
+                        <span>30</span>
+                        <span>60</span>
+                        <span>120</span>
+                        <span>180</span>
+                        <span>240</span>
+                        <span>300</span>
                     </div>
                 </div>
             </div>
@@ -49,7 +60,7 @@
     <main class="flex-col full-hw ja-center">
         <div class="score-bar flex-row js-between full-w pad-10 b-box" style="padding: 0px max(10%, min(200px, 10%));">
             <div class="time flex-row">
-                <h2 id="time">60</h2>
+                <h2 id="time">30</h2>
                 <p>s</p>
             </div>
             <div class="score flex-row gap-10">
@@ -60,14 +71,6 @@
                 <div class="accuracy flex-row">
                     <h2 id="accuracy">100</h2>
                     <p>%</p>
-                </div>
-                <div class="cpm flex-row">
-                    <h2 id="cpm">00</h2>
-                    <p>CPM</p>
-                </div>
-                <div class="w-error flex-row">
-                    <h2 id="w-error">00</h2>
-                    <p>Error</p>
                 </div>
             </div>
         </div>

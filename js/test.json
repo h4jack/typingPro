@@ -1,4 +1,4 @@
-export default {
+{
     "common": [
         "few",
         "town",
@@ -25,6 +25,7 @@ export default {
         "worker",
         "like",
         "on",
+        "no one",
         "teacher",
         "and",
         "shop",

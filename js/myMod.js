@@ -11,24 +11,30 @@ export function setTextToReal(customText = "") {
         // Based on the gameMode, select the words
         if (gameMode === 0) {
             // Easy mode: pick only from easy words
-            selectedWords = builtInWords.easy;
+            selectedWords = builtInWords.common;
+            console.log(selectedWords)
         } else if (gameMode === 1) {
             // Medium mode: pick from easy + medium words
-            selectedWords = [...builtInWords.easy, ...builtInWords.medium];
+            selectedWords = [...builtInWords.easy, ...builtInWords.common];
         } else if (gameMode === 2) {
             // Hard mode: pick from easy + medium + hard words
-            selectedWords = [...builtInWords.easy, ...builtInWords.medium, ...builtInWords.hard];
+            selectedWords = [...builtInWords.medium, ...builtInWords.easy, ...builtInWords.common];
         } else if (gameMode === 3) {
             // Special mode: pick from easy + medium + hard + special words
-            selectedWords = [...builtInWords.easy, ...builtInWords.medium, ...builtInWords.hard, ...builtInWords.special];
+            selectedWords = [...builtInWords.hard, ...builtInWords.medium, ...builtInWords.easy, ...builtInWords.common];
         } else if (gameMode === 4) {
             // Coding mode: pick only from coding words
+            selectedWords = [...builtInWords.special, ...builtInWords.hard, ...builtInWords.medium, ...builtInWords.easy, ...builtInWords.common];
+        } else if (gameMode === 5) {
+            // Coding mode: pick only from coding words
             selectedWords = builtInWords.coding;
+        } else {
+            selectedWords = builtInWords.common;
         }
 
         // Shuffle the selected words array
         myModule.shuffleArray(selectedWords);
-
+        // console.log(selectedWords)
         // Assign the shuffled words to testText.realText
         testText.realText = selectedWords;
     }
@@ -57,8 +63,6 @@ export function startTyping() {
             remainingTime,
             result.wpm.toFixed(0),
             result.accuracy.toFixed(2),
-            result.cpm,
-            result.error
         );
     }, 500);
 }

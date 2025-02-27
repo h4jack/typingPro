@@ -87,18 +87,13 @@ function tabPressed() {
 
 
 function setStatUI(
-    time = "00",
+    time = "30",
     wpm = "00",
-    accuracy = "00",
-    cpm = "00",
-    error = "00"
+    accuracy = "100",
 ) {
     time_f.innerText = time;
     wpm_f.innerText = wpm;
     accuracy_f.innerText = accuracy;
-    cpm_f.innerText = cpm;
-    error_f.innerText = error;
-
 }
 
 // Names export for UI features.
